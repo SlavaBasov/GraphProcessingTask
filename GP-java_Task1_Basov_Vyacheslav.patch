@@ -1,7 +1,7 @@
 From 731505d75eb84a449395c3c360840d8e3a6a1018 Mon Sep 17 00:00:00 2001
 From: SlavaBasov <61534514+SlavaBasov@users.noreply.github.com>
 Date: Sun, 6 Feb 2022 16:04:26 +0300
-Subject: [PATCH 1/7] Initial commit
+Subject: [PATCH 01/10] Initial commit
 
 ---
  README.md | 1 +
@@ -23,7 +23,7 @@ index 0000000..c727c50
 From b68c8014f8f48a2d12bd2f9a7d9953ac8739cf02 Mon Sep 17 00:00:00 2001
 From: SlavaBasov <slavabasov987@gmail.com>
 Date: Sun, 6 Feb 2022 16:20:06 +0300
-Subject: [PATCH 2/7] Task 1 first commit
+Subject: [PATCH 02/10] Task 1 first commit
 
 ---
  .gitignore               | 33 +++++++++++++++++++++++++++++++++
@@ -92,7 +92,7 @@ index 0000000..49b4fdb
 From 57ce754f13c4a08bcf94a918f1e9f0a532844542 Mon Sep 17 00:00:00 2001
 From: SlavaBasov <slavabasov987@gmail.com>
 Date: Sun, 6 Feb 2022 16:31:13 +0300
-Subject: [PATCH 3/7] added array
+Subject: [PATCH 03/10] added array
 
 ---
  src/com/company/App.java | 4 ++++
@@ -120,7 +120,7 @@ index 49b4fdb..44a9a85 100644
 From 78dd3f87e7e2e6325f91a4e0c84e92a82081c72b Mon Sep 17 00:00:00 2001
 From: SlavaBasov <slavabasov987@gmail.com>
 Date: Sun, 6 Feb 2022 16:35:08 +0300
-Subject: [PATCH 4/7] added ArrayHandler class
+Subject: [PATCH 04/10] added ArrayHandler class
 
 ---
  src/com/company/App.java          |  2 +-
@@ -164,7 +164,7 @@ index 0000000..46bf52e
 From 6b4aec0242425d05024f2742c10efa15cd57e649 Mon Sep 17 00:00:00 2001
 From: SlavaBasov <slavabasov987@gmail.com>
 Date: Sun, 6 Feb 2022 16:39:36 +0300
-Subject: [PATCH 5/7] added Node.class
+Subject: [PATCH 05/10] added Node.class
 
 ---
  src/com/company/Node.java | 52 +++++++++++++++++++++++++++++++++++++++
@@ -236,7 +236,7 @@ index 0000000..3622918
 From 6094190e988f534f47f9b57efb4a67e8d6637a6f Mon Sep 17 00:00:00 2001
 From: SlavaBasov <slavabasov987@gmail.com>
 Date: Sun, 6 Feb 2022 16:54:21 +0300
-Subject: [PATCH 6/7] adding priorityQueue in ArrayHandler.class
+Subject: [PATCH 06/10] adding priorityQueue in ArrayHandler.class
 
 ---
  GP-java_Task1_Basov_Vyacheslav.patch | 0
@@ -268,8 +268,8 @@ index 46bf52e..a8468d4 100644
 From 768b8407fafa2d424028892ebf671f1da2cfaed3 Mon Sep 17 00:00:00 2001
 From: SlavaBasov <slavabasov987@gmail.com>
 Date: Sun, 6 Feb 2022 17:43:43 +0300
-Subject: [PATCH 7/7] adding longestWayst[][] and longestPath fields, dijkstra
- and processNeighbours methods
+Subject: [PATCH 07/10] adding longestWayst[][] and longestPath fields,
+ dijkstra and processNeighbours methods
 
 ---
  GP-java_Task1_Basov_Vyacheslav.patch | 31 ++++++++++++++
@@ -387,6 +387,622 @@ index a8468d4..dcdc72d 100644
 +        }
 +    }
  }
+-- 
+2.34.1.windows.1
+
+
+From 8ec2c49c232d41e1b6f6398278ff0f7b1557c370 Mon Sep 17 00:00:00 2001
+From: SlavaBasov <slavabasov987@gmail.com>
+Date: Sun, 6 Feb 2022 17:52:10 +0300
+Subject: [PATCH 08/10] adding start and printResults methods
+
+---
+ GP-java_Task1_Basov_Vyacheslav.patch | 363 ++++++++++++++++++++++++++-
+ src/com/company/ArrayHandler.java    |  22 ++
+ 2 files changed, 384 insertions(+), 1 deletion(-)
+
+diff --git a/GP-java_Task1_Basov_Vyacheslav.patch b/GP-java_Task1_Basov_Vyacheslav.patch
+index 5b0b6a1..3533ab4 100644
+--- a/GP-java_Task1_Basov_Vyacheslav.patch
++++ b/GP-java_Task1_Basov_Vyacheslav.patch
+@@ -1,7 +1,242 @@
++From 731505d75eb84a449395c3c360840d8e3a6a1018 Mon Sep 17 00:00:00 2001
++From: SlavaBasov <61534514+SlavaBasov@users.noreply.github.com>
++Date: Sun, 6 Feb 2022 16:04:26 +0300
++Subject: [PATCH 1/7] Initial commit
++
++---
++ README.md | 1 +
++ 1 file changed, 1 insertion(+)
++ create mode 100644 README.md
++
++diff --git a/README.md b/README.md
++new file mode 100644
++index 0000000..c727c50
++--- /dev/null
+++++ b/README.md
++@@ -0,0 +1 @@
+++# GraphProcessingTask
++\ No newline at end of file
++-- 
++2.34.1.windows.1
++
++
++From b68c8014f8f48a2d12bd2f9a7d9953ac8739cf02 Mon Sep 17 00:00:00 2001
++From: SlavaBasov <slavabasov987@gmail.com>
++Date: Sun, 6 Feb 2022 16:20:06 +0300
++Subject: [PATCH 2/7] Task 1 first commit
++
++---
++ .gitignore               | 33 +++++++++++++++++++++++++++++++++
++ src/com/company/App.java |  8 ++++++++
++ 2 files changed, 41 insertions(+)
++ create mode 100644 .gitignore
++ create mode 100644 src/com/company/App.java
++
++diff --git a/.gitignore b/.gitignore
++new file mode 100644
++index 0000000..549e00a
++--- /dev/null
+++++ b/.gitignore
++@@ -0,0 +1,33 @@
+++HELP.md
+++target/
+++!.mvn/wrapper/maven-wrapper.jar
+++!**/src/main/**/target/
+++!**/src/test/**/target/
+++
+++### STS ###
+++.apt_generated
+++.classpath
+++.factorypath
+++.project
+++.settings
+++.springBeans
+++.sts4-cache
+++
+++### IntelliJ IDEA ###
+++.idea
+++*.iws
+++*.iml
+++*.ipr
+++
+++### NetBeans ###
+++/nbproject/private/
+++/nbbuild/
+++/dist/
+++/nbdist/
+++/.nb-gradle/
+++build/
+++!**/src/main/**/build/
+++!**/src/test/**/build/
+++
+++### VS Code ###
+++.vscode/
++diff --git a/src/com/company/App.java b/src/com/company/App.java
++new file mode 100644
++index 0000000..49b4fdb
++--- /dev/null
+++++ b/src/com/company/App.java
++@@ -0,0 +1,8 @@
+++package com.company;
+++
+++public class App {
+++
+++    public static void main(String[] args) {
+++
+++    }
+++}
++-- 
++2.34.1.windows.1
++
++
++From 57ce754f13c4a08bcf94a918f1e9f0a532844542 Mon Sep 17 00:00:00 2001
++From: SlavaBasov <slavabasov987@gmail.com>
++Date: Sun, 6 Feb 2022 16:31:13 +0300
++Subject: [PATCH 3/7] added array
++
++---
++ src/com/company/App.java | 4 ++++
++ 1 file changed, 4 insertions(+)
++
++diff --git a/src/com/company/App.java b/src/com/company/App.java
++index 49b4fdb..44a9a85 100644
++--- a/src/com/company/App.java
+++++ b/src/com/company/App.java
++@@ -3,6 +3,10 @@ package com.company;
++ public class App {
++ 
++     public static void main(String[] args) {
+++        int[][] array = {{1,3,3},
+++                         {2,1,4},
+++                         {0,6,4}};
++ 
+++        
++     }
++ }
++-- 
++2.34.1.windows.1
++
++
++From 78dd3f87e7e2e6325f91a4e0c84e92a82081c72b Mon Sep 17 00:00:00 2001
++From: SlavaBasov <slavabasov987@gmail.com>
++Date: Sun, 6 Feb 2022 16:35:08 +0300
++Subject: [PATCH 4/7] added ArrayHandler class
++
++---
++ src/com/company/App.java          |  2 +-
++ src/com/company/ArrayHandler.java | 11 +++++++++++
++ 2 files changed, 12 insertions(+), 1 deletion(-)
++ create mode 100644 src/com/company/ArrayHandler.java
++
++diff --git a/src/com/company/App.java b/src/com/company/App.java
++index 44a9a85..9bb6b98 100644
++--- a/src/com/company/App.java
+++++ b/src/com/company/App.java
++@@ -7,6 +7,6 @@ public class App {
++                          {2,1,4},
++                          {0,6,4}};
++ 
++-        
+++
++     }
++ }
++diff --git a/src/com/company/ArrayHandler.java b/src/com/company/ArrayHandler.java
++new file mode 100644
++index 0000000..46bf52e
++--- /dev/null
+++++ b/src/com/company/ArrayHandler.java
++@@ -0,0 +1,11 @@
+++package com.company;
+++
+++import java.util.Queue;
+++
+++public class ArrayHandler {
+++    private int dist[][];
+++    private int i;
+++    private int j;
+++    private int V;
+++    private int[][] array;
+++}
++-- 
++2.34.1.windows.1
++
++
++From 6b4aec0242425d05024f2742c10efa15cd57e649 Mon Sep 17 00:00:00 2001
++From: SlavaBasov <slavabasov987@gmail.com>
++Date: Sun, 6 Feb 2022 16:39:36 +0300
++Subject: [PATCH 5/7] added Node.class
++
++---
++ src/com/company/Node.java | 52 +++++++++++++++++++++++++++++++++++++++
++ 1 file changed, 52 insertions(+)
++ create mode 100644 src/com/company/Node.java
++
++diff --git a/src/com/company/Node.java b/src/com/company/Node.java
++new file mode 100644
++index 0000000..3622918
++--- /dev/null
+++++ b/src/com/company/Node.java
++@@ -0,0 +1,52 @@
+++package com.company;
+++
+++import java.util.Comparator;
+++
+++public class Node implements Comparator<Node> {
+++
+++    private int i;
+++    private int j;
+++    private int cost;
+++
+++    public Node() {
+++    }
+++
+++    public Node(int i, int j, int cost) {
+++        this.i = i;
+++        this.j = j;
+++        this.cost = cost;
+++    }
+++
+++    @Override
+++    public int compare(Node node1, Node node2) {
+++        if (node1.cost > node2.cost)
+++            return -1;
+++        if (node1.cost < node2.cost)
+++            return 1;
+++        return 0;
+++    }
+++
+++    public int getI() {
+++        return i;
+++    }
+++
+++    public void setI(int i) {
+++        this.i = i;
+++    }
+++
+++    public int getJ() {
+++        return j;
+++    }
+++
+++    public void setJ(int j) {
+++        this.j = j;
+++    }
+++
+++    public int getCost() {
+++        return cost;
+++    }
+++
+++    public void setCost(int cost) {
+++        this.cost = cost;
+++    }
+++}
++-- 
++2.34.1.windows.1
++
++
+ From 6094190e988f534f47f9b57efb4a67e8d6637a6f Mon Sep 17 00:00:00 2001
+ From: SlavaBasov <slavabasov987@gmail.com>
+ Date: Sun, 6 Feb 2022 16:54:21 +0300
+-Subject: [PATCH] adding priorityQueue in ArrayHandler.class
++Subject: [PATCH 6/7] adding priorityQueue in ArrayHandler.class
+ 
+ ---
+  GP-java_Task1_Basov_Vyacheslav.patch | 0
+@@ -29,3 +264,129 @@ index 46bf52e..a8468d4 100644
+ -- 
+ 2.34.1.windows.1
+ 
++
++From 768b8407fafa2d424028892ebf671f1da2cfaed3 Mon Sep 17 00:00:00 2001
++From: SlavaBasov <slavabasov987@gmail.com>
++Date: Sun, 6 Feb 2022 17:43:43 +0300
++Subject: [PATCH 7/7] adding longestWayst[][] and longestPath fields, dijkstra
++ and processNeighbours methods
++
++---
++ GP-java_Task1_Basov_Vyacheslav.patch | 31 ++++++++++++++
++ src/com/company/ArrayHandler.java    | 60 ++++++++++++++++++++++++++++
++ 2 files changed, 91 insertions(+)
++
++diff --git a/GP-java_Task1_Basov_Vyacheslav.patch b/GP-java_Task1_Basov_Vyacheslav.patch
++index e69de29..5b0b6a1 100644
++--- a/GP-java_Task1_Basov_Vyacheslav.patch
+++++ b/GP-java_Task1_Basov_Vyacheslav.patch
++@@ -0,0 +1,31 @@
+++From 6094190e988f534f47f9b57efb4a67e8d6637a6f Mon Sep 17 00:00:00 2001
+++From: SlavaBasov <slavabasov987@gmail.com>
+++Date: Sun, 6 Feb 2022 16:54:21 +0300
+++Subject: [PATCH] adding priorityQueue in ArrayHandler.class
+++
+++---
+++ GP-java_Task1_Basov_Vyacheslav.patch | 0
+++ src/com/company/ArrayHandler.java    | 3 +--
+++ 2 files changed, 1 insertion(+), 2 deletions(-)
+++ create mode 100644 GP-java_Task1_Basov_Vyacheslav.patch
+++
+++diff --git a/GP-java_Task1_Basov_Vyacheslav.patch b/GP-java_Task1_Basov_Vyacheslav.patch
+++new file mode 100644
+++index 0000000..e69de29
+++diff --git a/src/com/company/ArrayHandler.java b/src/com/company/ArrayHandler.java
+++index 46bf52e..a8468d4 100644
+++--- a/src/com/company/ArrayHandler.java
++++++ b/src/com/company/ArrayHandler.java
+++@@ -4,8 +4,7 @@ import java.util.Queue;
+++ 
+++ public class ArrayHandler {
+++     private int dist[][];
+++-    private int i;
+++-    private int j;
++++    private Queue<Node> pq;
+++     private int V;
+++     private int[][] array;
+++ }
+++-- 
+++2.34.1.windows.1
+++
++diff --git a/src/com/company/ArrayHandler.java b/src/com/company/ArrayHandler.java
++index a8468d4..dcdc72d 100644
++--- a/src/com/company/ArrayHandler.java
+++++ b/src/com/company/ArrayHandler.java
++@@ -1,5 +1,6 @@
++ package com.company;
++ 
+++import java.util.PriorityQueue;
++ import java.util.Queue;
++ 
++ public class ArrayHandler {
++@@ -7,4 +8,63 @@ public class ArrayHandler {
++     private Queue<Node> pq;
++     private int V;
++     private int[][] array;
+++    private int longestWays[][];
+++    private Node longestPath;
+++
+++    public ArrayHandler(int[][] array) {
+++        this.V = array.length;
+++        dist = new int[V][V];
+++        pq = new PriorityQueue<>(V * V, new Node());
+++        longestWays=new int[V][V];
+++        longestPath = new Node(0,0,0);
+++    }
+++
+++    public void dijkstra(int[][] array, int iSrc, int jSrc) {
+++        this.array = array;
+++
+++        pq.add(new Node(iSrc, jSrc, array[iSrc][jSrc]));
+++
+++        dist[iSrc][jSrc] = array[iSrc][jSrc];
+++        while (true) {
+++            if (pq.isEmpty()) {
+++                if(longestWays[iSrc][jSrc]>longestPath.getCost())
+++                    longestPath.setI(iSrc);
+++                longestPath.setJ(jSrc);
+++                longestPath.setCost(longestWays[iSrc][jSrc]);
+++                return;
+++            }
+++            int i = pq.element().getI();
+++            int j = pq.element().getJ();
+++            pq.remove();
+++
+++            if(j!=0)
+++                processNeighbours(i, j);
+++
+++            if(j==0 && dist[i][j]>longestWays[iSrc][jSrc])
+++                longestWays[iSrc][jSrc]=dist[i][j];
+++        }
+++
+++    }
+++
+++    private void processNeighbours(int i, int j) {
+++
+++        pq.add(new Node(i, j-1, array[i][j-1]));
+++        if(dist[i][j-1] < (dist[i][j]+array[i][j-1])){
+++            dist[i][j-1]=dist[i][j]+array[i][j-1];
+++        }
+++
+++        if(i!=dist.length - 1){
+++            pq.add(new Node(i+1, j-1, array[i+1][j-1]));
+++            if(dist[i+1][j-1]< (dist[i][j]+array[i+1][j-1])) {
+++                dist[i+1][j-1]=dist[i][j]+array[i+1][j-1];
+++            }
+++        }
+++
+++        if(i!=0) {
+++            pq.add(new Node(i - 1, j - 1, array[i - 1][j - 1]));
+++            if(dist[i-1][j-1]< (dist[i][j]+array[i-1][j-1])) {
+++                dist[i-1][j-1]=dist[i][j]+array[i-1][j-1];
+++            }
+++        }
+++    }
++ }
++-- 
++2.34.1.windows.1
++
+diff --git a/src/com/company/ArrayHandler.java b/src/com/company/ArrayHandler.java
+index dcdc72d..0385424 100644
+--- a/src/com/company/ArrayHandler.java
++++ b/src/com/company/ArrayHandler.java
+@@ -67,4 +67,26 @@ public class ArrayHandler {
+             }
+         }
+     }
++
++    public void start(int[][] array){
++        for (int i = 0; i < array.length; i++){
++            for (int j = 0; j < array.length; j++){
++                dist=new int[V][V];
++                dijkstra(array, i, j);
++            }
++        }
++        printResults();
++    }
++
++    private void printResults(){
++        System.out.println("All longest paths tree from initialVertex:");
++        for (int i = 0; i < longestWays.length; i++){
++            for (int j = 0; j < longestWays.length; j++){
++                System.out.println(String.format("initialVertex -> [%d][%d] = %d",i,j,longestWays[i][j]));
++            }
++        }
++        System.out.println(String.format("longest path tree from vertex 'initialVertex' = %d",longestPath.getCost()));
++    }
++
++
+ }
+-- 
+2.34.1.windows.1
+
+
+From 0b8f753b0121d71f466c68139ebe1464a7e28857 Mon Sep 17 00:00:00 2001
+From: SlavaBasov <slavabasov987@gmail.com>
+Date: Sun, 6 Feb 2022 17:54:59 +0300
+Subject: [PATCH 09/10] adding startPoing in main method
+
+---
+ src/com/company/App.java          | 3 +++
+ src/com/company/ArrayHandler.java | 2 --
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/src/com/company/App.java b/src/com/company/App.java
+index 9bb6b98..53b0417 100644
+--- a/src/com/company/App.java
++++ b/src/com/company/App.java
+@@ -8,5 +8,8 @@ public class App {
+                          {0,6,4}};
+ 
+ 
++        ArrayHandler arrayHendler = new ArrayHandler(array);
++
++        arrayHendler.start(array);
+     }
+ }
+diff --git a/src/com/company/ArrayHandler.java b/src/com/company/ArrayHandler.java
+index 0385424..be025ee 100644
+--- a/src/com/company/ArrayHandler.java
++++ b/src/com/company/ArrayHandler.java
+@@ -87,6 +87,4 @@ public class ArrayHandler {
+         }
+         System.out.println(String.format("longest path tree from vertex 'initialVertex' = %d",longestPath.getCost()));
+     }
+-
+-
+ }
+-- 
+2.34.1.windows.1
+
+
+From 3c506139f87142e67a9643c7ce1b6c99b262e11f Mon Sep 17 00:00:00 2001
+From: SlavaBasov <slavabasov987@gmail.com>
+Date: Sun, 6 Feb 2022 18:10:15 +0300
+Subject: [PATCH 10/10] adding 5x5 array, changing longestPath handling in
+ dijkstra method
+
+---
+ .../GraphProcessingTask/com/company/App.class  | Bin 0 -> 897 bytes
+ .../com/company/ArrayHandler.class             | Bin 0 -> 2928 bytes
+ .../GraphProcessingTask/com/company/Node.class | Bin 0 -> 1387 bytes
+ src/com/company/App.java                       |  17 ++++++++++++++---
+ src/com/company/ArrayHandler.java              |   7 ++++---
+ 5 files changed, 18 insertions(+), 6 deletions(-)
+ create mode 100644 out/production/GraphProcessingTask/com/company/App.class
+ create mode 100644 out/production/GraphProcessingTask/com/company/ArrayHandler.class
+ create mode 100644 out/production/GraphProcessingTask/com/company/Node.class
+
+diff --git a/out/production/GraphProcessingTask/com/company/App.class b/out/production/GraphProcessingTask/com/company/App.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..0c6724d038f1f20c7a305098a52a75e64dc2c4ab
+GIT binary patch
+literal 897
+zcmZuuU279T6g`vOnc2i>l2&69KU)=|P#3lOV1ponREW((q_E^^k}h>ivI*O*(7#gp
+zCw#Hs*AMU~`5>N|TGOC`%)N8YJ@=lu`{UQ=?*P_uw*-xA8rL;$l;Gi}J#J~-)>six
+zog_{27Xn`U{<eVsYPu5(RJutTZyijAarVv($3&L8(~%i(n=G;SKcJt#Pxb|B-O+Rs
+z@;@`_Vfb=3+hC)KNm7A&d(ho8A51tl>2BE1vn1W!aDz;?OX>1|XqqxvW)2_G)L`)D
+z?E3gDc_L7D1)FiYGmbNX)}jF`-ZYM*lTv?rkd5NkiG4;ucMq+hG6EC@3bub^!Tve5
+zEm|$(4pzC6g`(L^pgMn8Z@3qaavE&YuzjA~&rOzN1&YhJzXCWMMV=+zLPo(TADlpZ
+zbo2$D%7Grr%*&?*xQI)<6;VNz2*u)<EhXbK^$mr{Q(sGw=l3FC^&+WyeI^!>M2JdF
+zL^{MHQnf{dy4q>=qBc^t+IQ$&A1T{a{;g#nN!Fptq31eBD(Lm!2CjQxyK|r)P+=#t
+zeWaxw;V8n+qHV@pyD^Tj!>dkJB*$ksm2#ZL|B-1&*)32i85N`Udi||0@S?R7_|N^O
+zzxD}ozU>zGZFk<`R*z5-_fQuh8saIM?hCA+ZW%Q!v95!kSjJ_3gCiW{3bO(gHPo4T
+Q)M;Er13vjCs|#rT2J^|TkN^Mx
+
+literal 0
+HcmV?d00001
+
+diff --git a/out/production/GraphProcessingTask/com/company/ArrayHandler.class b/out/production/GraphProcessingTask/com/company/ArrayHandler.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..1961b6e3b3322554c58d1dda3c3d7cd3a62c8d17
+GIT binary patch
+literal 2928
+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
+
+literal 0
+HcmV?d00001
+
+diff --git a/out/production/GraphProcessingTask/com/company/Node.class b/out/production/GraphProcessingTask/com/company/Node.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..e0afbad8e6ad6091929360dce25189fc4878c5e7
+GIT binary patch
+literal 1387
+zcmZ{iUr!T36vfZ%&UWq6N`YDh3IZyWEwT|ze1MP`5|bK)2Mq5^ZE&%)q-;(6I>tv{
+zOh6MKjL&{3<GHiTpR`LhGk53C-E)6)cK-hR^&7xT1Rh*0<>8<v)3Qvyi@L|S;^MiB
+zRRtAsG&qhGbhCRFE95q#P84q`*tO*YX1BW^S_-2(QKz-rKRImm-iL>6X2y5A&9HqC
+z_99uQNgaQT&SbCIJqb8Y!_JprmkJvct~DABk#x;Qj~Yw0;lkm}G69_qMP8(FO`*6S
+zhs{s#!qcn9N3ED;Wag~T%tF^pJI$@PNs__kYTF#tWmWP<jN|Zg7_`IAQLuM-+-k-f
+z!x>S|??*?SFzyTd=5R@p>Bmt!*p|ch!noVp96r$&?eO-y{a&;6CK5CA;?b%=6i~$d
+z0`l+*7?G&}PoXsEX8{jTVSbQXp=?qE44CI%ccE|(HY`!+9kHZ=iR{7Xai7gOk8-un
+zs2CmpC)9USRx(8v=MiXvjq$CJ6k!|_T!}!Lvk0`=Kr@y_z@NT^<yS9Z`!ko&H+mI<
+zflW2P$)m)#F)EE4Z9n-w)uxgG7pSs97m~6V#6u}DB<&otv(3F~{Q`Q0;~O07{A%$P
+zjy|`~xo@){_>~Y;sQ8fdkN8YtijSObF44IrsIq2)U8v2v3HF)fyM|R1AEq#!5(JEi
+zc^9yxm1SDxOma5UxGHASkGEJYN6Q)0ZmjZ5c7eE0j6x-;x`xZ8_9)C|f|xVk23gDm
+zd7KSm4}$mvsow!27fT$N%LLJbj;v;a%x8n#x;%*^YXn)p14J%|D!u0ASV-M{#a}9y
+fqv+TFz**t=f!rXFa|@`L8f?*a`H@fY%*4h2!wtDc
+
+literal 0
+HcmV?d00001
+
+diff --git a/src/com/company/App.java b/src/com/company/App.java
+index 53b0417..6d20374 100644
+--- a/src/com/company/App.java
++++ b/src/com/company/App.java
+@@ -3,13 +3,24 @@ package com.company;
+ public class App {
+ 
+     public static void main(String[] args) {
+-        int[][] array = {{1,3,3},
++        int[][] array1 = {{1,3,3},
+                          {2,1,4},
+                          {0,6,4}};
+ 
++        int[][] array2 = {{1,3,3,4},
++                          {2,1,4,3},
++                          {1,0,2,3},
++                          {0,6,4,5}};
+ 
+-        ArrayHandler arrayHendler = new ArrayHandler(array);
++        int[][] array3 = {{3,5,6,4,2},
++                          {5,1,2,5,3},
++                          {2,8,9,1,2},
++                          {8,1,2,5,3},
++                          {1,2,1,2,0}};
+ 
+-        arrayHendler.start(array);
++
++        ArrayHandler arrayHendler = new ArrayHandler(array3);
++
++        arrayHendler.start(array3);
+     }
+ }
+diff --git a/src/com/company/ArrayHandler.java b/src/com/company/ArrayHandler.java
+index be025ee..052925a 100644
+--- a/src/com/company/ArrayHandler.java
++++ b/src/com/company/ArrayHandler.java
+@@ -27,10 +27,11 @@ public class ArrayHandler {
+         dist[iSrc][jSrc] = array[iSrc][jSrc];
+         while (true) {
+             if (pq.isEmpty()) {
+-                if(longestWays[iSrc][jSrc]>longestPath.getCost())
++                if(longestWays[iSrc][jSrc]>longestPath.getCost()) {
+                     longestPath.setI(iSrc);
+-                longestPath.setJ(jSrc);
+-                longestPath.setCost(longestWays[iSrc][jSrc]);
++                    longestPath.setJ(jSrc);
++                    longestPath.setCost(longestWays[iSrc][jSrc]);
++                }
+                 return;
+             }
+             int i = pq.element().getI();
 -- 
 2.34.1.windows.1
 

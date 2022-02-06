@@ -27,10 +27,11 @@ public class ArrayHandler {
         dist[iSrc][jSrc] = array[iSrc][jSrc];
         while (true) {
             if (pq.isEmpty()) {
-                if(longestWays[iSrc][jSrc]>longestPath.getCost())
+                if(longestWays[iSrc][jSrc]>longestPath.getCost()) {
                     longestPath.setI(iSrc);
-                longestPath.setJ(jSrc);
-                longestPath.setCost(longestWays[iSrc][jSrc]);
+                    longestPath.setJ(jSrc);
+                    longestPath.setCost(longestWays[iSrc][jSrc]);
+                }
                 return;
             }
             int i = pq.element().getI();

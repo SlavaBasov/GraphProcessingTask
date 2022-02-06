@@ -1,0 +1,31 @@
+From 6094190e988f534f47f9b57efb4a67e8d6637a6f Mon Sep 17 00:00:00 2001
+From: SlavaBasov <slavabasov987@gmail.com>
+Date: Sun, 6 Feb 2022 16:54:21 +0300
+Subject: [PATCH] adding priorityQueue in ArrayHandler.class
+
+---
+ GP-java_Task1_Basov_Vyacheslav.patch | 0
+ src/com/company/ArrayHandler.java    | 3 +--
+ 2 files changed, 1 insertion(+), 2 deletions(-)
+ create mode 100644 GP-java_Task1_Basov_Vyacheslav.patch
+
+diff --git a/GP-java_Task1_Basov_Vyacheslav.patch b/GP-java_Task1_Basov_Vyacheslav.patch
+new file mode 100644
+index 0000000..e69de29
+diff --git a/src/com/company/ArrayHandler.java b/src/com/company/ArrayHandler.java
+index 46bf52e..a8468d4 100644
+--- a/src/com/company/ArrayHandler.java
++++ b/src/com/company/ArrayHandler.java
+@@ -4,8 +4,7 @@ import java.util.Queue;
+ 
+ public class ArrayHandler {
+     private int dist[][];
+-    private int i;
+-    private int j;
++    private Queue<Node> pq;
+     private int V;
+     private int[][] array;
+ }
+-- 
+2.34.1.windows.1
+

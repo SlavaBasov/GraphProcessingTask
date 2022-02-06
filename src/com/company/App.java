@@ -8,5 +8,8 @@ public class App {
                          {0,6,4}};
 
 
+        ArrayHandler arrayHendler = new ArrayHandler(array);
+
+        arrayHendler.start(array);
     }
 }

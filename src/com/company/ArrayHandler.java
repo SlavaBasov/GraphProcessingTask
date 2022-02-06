@@ -87,6 +87,4 @@ public class ArrayHandler {
         }
         System.out.println(String.format("longest path tree from vertex 'initialVertex' = %d",longestPath.getCost()));
     }
-
-
 }

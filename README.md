@@ -1,5 +1,6 @@
 # GraphProcessingTask
 
+
 There is an array of positive integers.  The array has to be with equal dimensions, i.e  i=j.
 The cells in the array are the vertices of the graph. The integers are the edges of the graph.
 

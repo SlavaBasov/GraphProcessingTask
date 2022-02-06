@@ -67,4 +67,26 @@ public class ArrayHandler {
             }
         }
     }
+
+    public void start(int[][] array){
+        for (int i = 0; i < array.length; i++){
+            for (int j = 0; j < array.length; j++){
+                dist=new int[V][V];
+                dijkstra(array, i, j);
+            }
+        }
+        printResults();
+    }
+
+    private void printResults(){
+        System.out.println("All longest paths tree from initialVertex:");
+        for (int i = 0; i < longestWays.length; i++){
+            for (int j = 0; j < longestWays.length; j++){
+                System.out.println(String.format("initialVertex -> [%d][%d] = %d",i,j,longestWays[i][j]));
+            }
+        }
+        System.out.println(String.format("longest path tree from vertex 'initialVertex' = %d",longestPath.getCost()));
+    }
+
+
 }

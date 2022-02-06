@@ -1,7 +1,242 @@
+From 731505d75eb84a449395c3c360840d8e3a6a1018 Mon Sep 17 00:00:00 2001
+From: SlavaBasov <61534514+SlavaBasov@users.noreply.github.com>
+Date: Sun, 6 Feb 2022 16:04:26 +0300
+Subject: [PATCH 1/7] Initial commit
+
+---
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..c727c50
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1 @@
++# GraphProcessingTask
+\ No newline at end of file
+-- 
+2.34.1.windows.1
+
+
+From b68c8014f8f48a2d12bd2f9a7d9953ac8739cf02 Mon Sep 17 00:00:00 2001
+From: SlavaBasov <slavabasov987@gmail.com>
+Date: Sun, 6 Feb 2022 16:20:06 +0300
+Subject: [PATCH 2/7] Task 1 first commit
+
+---
+ .gitignore               | 33 +++++++++++++++++++++++++++++++++
+ src/com/company/App.java |  8 ++++++++
+ 2 files changed, 41 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 src/com/company/App.java
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..549e00a
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,33 @@
++HELP.md
++target/
++!.mvn/wrapper/maven-wrapper.jar
++!**/src/main/**/target/
++!**/src/test/**/target/
++
++### STS ###
++.apt_generated
++.classpath
++.factorypath
++.project
++.settings
++.springBeans
++.sts4-cache
++
++### IntelliJ IDEA ###
++.idea
++*.iws
++*.iml
++*.ipr
++
++### NetBeans ###
++/nbproject/private/
++/nbbuild/
++/dist/
++/nbdist/
++/.nb-gradle/
++build/
++!**/src/main/**/build/
++!**/src/test/**/build/
++
++### VS Code ###
++.vscode/
+diff --git a/src/com/company/App.java b/src/com/company/App.java
+new file mode 100644
+index 0000000..49b4fdb
+--- /dev/null
++++ b/src/com/company/App.java
+@@ -0,0 +1,8 @@
++package com.company;
++
++public class App {
++
++    public static void main(String[] args) {
++
++    }
++}
+-- 
+2.34.1.windows.1
+
+
+From 57ce754f13c4a08bcf94a918f1e9f0a532844542 Mon Sep 17 00:00:00 2001
+From: SlavaBasov <slavabasov987@gmail.com>
+Date: Sun, 6 Feb 2022 16:31:13 +0300
+Subject: [PATCH 3/7] added array
+
+---
+ src/com/company/App.java | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/src/com/company/App.java b/src/com/company/App.java
+index 49b4fdb..44a9a85 100644
+--- a/src/com/company/App.java
++++ b/src/com/company/App.java
+@@ -3,6 +3,10 @@ package com.company;
+ public class App {
+ 
+     public static void main(String[] args) {
++        int[][] array = {{1,3,3},
++                         {2,1,4},
++                         {0,6,4}};
+ 
++        
+     }
+ }
+-- 
+2.34.1.windows.1
+
+
+From 78dd3f87e7e2e6325f91a4e0c84e92a82081c72b Mon Sep 17 00:00:00 2001
+From: SlavaBasov <slavabasov987@gmail.com>
+Date: Sun, 6 Feb 2022 16:35:08 +0300
+Subject: [PATCH 4/7] added ArrayHandler class
+
+---
+ src/com/company/App.java          |  2 +-
+ src/com/company/ArrayHandler.java | 11 +++++++++++
+ 2 files changed, 12 insertions(+), 1 deletion(-)
+ create mode 100644 src/com/company/ArrayHandler.java
+
+diff --git a/src/com/company/App.java b/src/com/company/App.java
+index 44a9a85..9bb6b98 100644
+--- a/src/com/company/App.java
++++ b/src/com/company/App.java
+@@ -7,6 +7,6 @@ public class App {
+                          {2,1,4},
+                          {0,6,4}};
+ 
+-        
++
+     }
+ }
+diff --git a/src/com/company/ArrayHandler.java b/src/com/company/ArrayHandler.java
+new file mode 100644
+index 0000000..46bf52e
+--- /dev/null
++++ b/src/com/company/ArrayHandler.java
+@@ -0,0 +1,11 @@
++package com.company;
++
++import java.util.Queue;
++
++public class ArrayHandler {
++    private int dist[][];
++    private int i;
++    private int j;
++    private int V;
++    private int[][] array;
++}
+-- 
+2.34.1.windows.1
+
+
+From 6b4aec0242425d05024f2742c10efa15cd57e649 Mon Sep 17 00:00:00 2001
+From: SlavaBasov <slavabasov987@gmail.com>
+Date: Sun, 6 Feb 2022 16:39:36 +0300
+Subject: [PATCH 5/7] added Node.class
+
+---
+ src/com/company/Node.java | 52 +++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 52 insertions(+)
+ create mode 100644 src/com/company/Node.java
+
+diff --git a/src/com/company/Node.java b/src/com/company/Node.java
+new file mode 100644
+index 0000000..3622918
+--- /dev/null
++++ b/src/com/company/Node.java
+@@ -0,0 +1,52 @@
++package com.company;
++
++import java.util.Comparator;
++
++public class Node implements Comparator<Node> {
++
++    private int i;
++    private int j;
++    private int cost;
++
++    public Node() {
++    }
++
++    public Node(int i, int j, int cost) {
++        this.i = i;
++        this.j = j;
++        this.cost = cost;
++    }
++
++    @Override
++    public int compare(Node node1, Node node2) {
++        if (node1.cost > node2.cost)
++            return -1;
++        if (node1.cost < node2.cost)
++            return 1;
++        return 0;
++    }
++
++    public int getI() {
++        return i;
++    }
++
++    public void setI(int i) {
++        this.i = i;
++    }
++
++    public int getJ() {
++        return j;
++    }
++
++    public void setJ(int j) {
++        this.j = j;
++    }
++
++    public int getCost() {
++        return cost;
++    }
++
++    public void setCost(int cost) {
++        this.cost = cost;
++    }
++}
+-- 
+2.34.1.windows.1
+
+
 From 6094190e988f534f47f9b57efb4a67e8d6637a6f Mon Sep 17 00:00:00 2001
 From: SlavaBasov <slavabasov987@gmail.com>
 Date: Sun, 6 Feb 2022 16:54:21 +0300
-Subject: [PATCH] adding priorityQueue in ArrayHandler.class
+Subject: [PATCH 6/7] adding priorityQueue in ArrayHandler.class
 
 ---
  GP-java_Task1_Basov_Vyacheslav.patch | 0
@@ -25,6 +260,132 @@ index 46bf52e..a8468d4 100644
 +    private Queue<Node> pq;
      private int V;
      private int[][] array;
+ }
+-- 
+2.34.1.windows.1
+
+
+From 768b8407fafa2d424028892ebf671f1da2cfaed3 Mon Sep 17 00:00:00 2001
+From: SlavaBasov <slavabasov987@gmail.com>
+Date: Sun, 6 Feb 2022 17:43:43 +0300
+Subject: [PATCH 7/7] adding longestWayst[][] and longestPath fields, dijkstra
+ and processNeighbours methods
+
+---
+ GP-java_Task1_Basov_Vyacheslav.patch | 31 ++++++++++++++
+ src/com/company/ArrayHandler.java    | 60 ++++++++++++++++++++++++++++
+ 2 files changed, 91 insertions(+)
+
+diff --git a/GP-java_Task1_Basov_Vyacheslav.patch b/GP-java_Task1_Basov_Vyacheslav.patch
+index e69de29..5b0b6a1 100644
+--- a/GP-java_Task1_Basov_Vyacheslav.patch
++++ b/GP-java_Task1_Basov_Vyacheslav.patch
+@@ -0,0 +1,31 @@
++From 6094190e988f534f47f9b57efb4a67e8d6637a6f Mon Sep 17 00:00:00 2001
++From: SlavaBasov <slavabasov987@gmail.com>
++Date: Sun, 6 Feb 2022 16:54:21 +0300
++Subject: [PATCH] adding priorityQueue in ArrayHandler.class
++
++---
++ GP-java_Task1_Basov_Vyacheslav.patch | 0
++ src/com/company/ArrayHandler.java    | 3 +--
++ 2 files changed, 1 insertion(+), 2 deletions(-)
++ create mode 100644 GP-java_Task1_Basov_Vyacheslav.patch
++
++diff --git a/GP-java_Task1_Basov_Vyacheslav.patch b/GP-java_Task1_Basov_Vyacheslav.patch
++new file mode 100644
++index 0000000..e69de29
++diff --git a/src/com/company/ArrayHandler.java b/src/com/company/ArrayHandler.java
++index 46bf52e..a8468d4 100644
++--- a/src/com/company/ArrayHandler.java
+++++ b/src/com/company/ArrayHandler.java
++@@ -4,8 +4,7 @@ import java.util.Queue;
++ 
++ public class ArrayHandler {
++     private int dist[][];
++-    private int i;
++-    private int j;
+++    private Queue<Node> pq;
++     private int V;
++     private int[][] array;
++ }
++-- 
++2.34.1.windows.1
++
+diff --git a/src/com/company/ArrayHandler.java b/src/com/company/ArrayHandler.java
+index a8468d4..dcdc72d 100644
+--- a/src/com/company/ArrayHandler.java
++++ b/src/com/company/ArrayHandler.java
+@@ -1,5 +1,6 @@
+ package com.company;
+ 
++import java.util.PriorityQueue;
+ import java.util.Queue;
+ 
+ public class ArrayHandler {
+@@ -7,4 +8,63 @@ public class ArrayHandler {
+     private Queue<Node> pq;
+     private int V;
+     private int[][] array;
++    private int longestWays[][];
++    private Node longestPath;
++
++    public ArrayHandler(int[][] array) {
++        this.V = array.length;
++        dist = new int[V][V];
++        pq = new PriorityQueue<>(V * V, new Node());
++        longestWays=new int[V][V];
++        longestPath = new Node(0,0,0);
++    }
++
++    public void dijkstra(int[][] array, int iSrc, int jSrc) {
++        this.array = array;
++
++        pq.add(new Node(iSrc, jSrc, array[iSrc][jSrc]));
++
++        dist[iSrc][jSrc] = array[iSrc][jSrc];
++        while (true) {
++            if (pq.isEmpty()) {
++                if(longestWays[iSrc][jSrc]>longestPath.getCost())
++                    longestPath.setI(iSrc);
++                longestPath.setJ(jSrc);
++                longestPath.setCost(longestWays[iSrc][jSrc]);
++                return;
++            }
++            int i = pq.element().getI();
++            int j = pq.element().getJ();
++            pq.remove();
++
++            if(j!=0)
++                processNeighbours(i, j);
++
++            if(j==0 && dist[i][j]>longestWays[iSrc][jSrc])
++                longestWays[iSrc][jSrc]=dist[i][j];
++        }
++
++    }
++
++    private void processNeighbours(int i, int j) {
++
++        pq.add(new Node(i, j-1, array[i][j-1]));
++        if(dist[i][j-1] < (dist[i][j]+array[i][j-1])){
++            dist[i][j-1]=dist[i][j]+array[i][j-1];
++        }
++
++        if(i!=dist.length - 1){
++            pq.add(new Node(i+1, j-1, array[i+1][j-1]));
++            if(dist[i+1][j-1]< (dist[i][j]+array[i+1][j-1])) {
++                dist[i+1][j-1]=dist[i][j]+array[i+1][j-1];
++            }
++        }
++
++        if(i!=0) {
++            pq.add(new Node(i - 1, j - 1, array[i - 1][j - 1]));
++            if(dist[i-1][j-1]< (dist[i][j]+array[i-1][j-1])) {
++                dist[i-1][j-1]=dist[i][j]+array[i-1][j-1];
++            }
++        }
++    }
  }
 -- 
 2.34.1.windows.1
